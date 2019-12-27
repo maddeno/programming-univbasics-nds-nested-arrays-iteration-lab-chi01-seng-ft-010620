@@ -23,7 +23,7 @@ def find_greater_pair(src)
     while element_index < src[row_index].count do
       if src[row_index][element_index] > current_number
         current_number = src[row_index][element_index]
-        new_array.shift(current_number)
+        new_array += current_number
         element_index +=1
     end
     row_index += 1
@@ -31,7 +31,7 @@ def find_greater_pair(src)
   new_array
 end
 
-# total_even_pairs(src)
+def# total_even_pairs(src)
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # if both numbers in the pair are even, then add both those numbers to the
   # total
@@ -39,3 +39,4 @@ end
   # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
   # the number was even. Review the operator documentation if you've forgotten
   # this!
+end
