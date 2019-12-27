@@ -24,8 +24,9 @@ def find_greater_pair(src)
       if src[row_index][element_index] > current_number
         current_number = src[row_index][element_index]
         new_array += current_number
-        element_index +=1
+        
       end
+    element_index +=1
     end
     row_index += 1
   end
