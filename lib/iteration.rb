@@ -20,7 +20,9 @@ def find_greater_pair(src)
   while row_index < src.count do 
     current_pair = src[row_index]
     if current_pair[0] < current_pair[1]
+      new_array.push(current_pair[1])
     else
+      new_array.push(current_pair[0])
     end
     row_index += 1
   end
