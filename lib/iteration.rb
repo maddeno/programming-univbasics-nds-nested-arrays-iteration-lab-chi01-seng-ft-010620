@@ -1,17 +1,34 @@
 def join_ingredients(src)
-  # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
-  #
-  # Build a new Array that contains strings where each pair of foods is
-  # inserted into this template:
-  #
-  # "I love (inner array element 0) and (inner array element 1) on my pizza""
-  # As such, there should be a new String for each inner array, or pair
+  new_array = []
+  row_index = 0 
+  while row_index < src.count do 
+    current_array = src[row_index]
+    new_array.push("I love #{current_array[0]} and #{current_array[1]} on my pizza")
+    row_index += 1
+  end
+  new_array
 end
+
 
 def find_greater_pair(src)
   # src will be an array of [ [number1, number2], ... [numberN, numberM] ]
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
+  
+  new_array = []
+  row_index = 0 
+  while row_index < src.count do 
+    element_index = 0 
+    current_number = src[row_index][0]
+    while element_index < src[row_index].count do
+      if src[row_index][element_index] > current_number
+        current_number = src[row_index][element_index]
+        new_array.shift(current_number)
+        element_index +=1
+    end
+    row_index += 1
+  end
+  new_array
 end
 
 def total_even_pairs(src)
